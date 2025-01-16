@@ -4,7 +4,11 @@ module.exports = {
     './dashboard.css',
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundColor: {
+        'native': '#050929',
+      },
+    },
   },
   plugins: [],
 }
