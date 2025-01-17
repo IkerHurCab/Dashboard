@@ -8,6 +8,9 @@ module.exports = {
       backgroundColor: {
         'native': '#050929',
       },
+      fontFamily: {
+        "pixel": ["'Press Start 2P'", "cursive"],
+      },
     },
   },
   plugins: [],

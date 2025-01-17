@@ -3,6 +3,7 @@
     "tailwindcss": "^3.4.17"
   },
 "scripts": {
+  "dev": "tailwindcss -i ./dashboard.css -o ./dist/output.css --watch",
   "build": "tailwindcss -i ./dashboard.css -o ./dist/output.css --minify"
 }
 ,
