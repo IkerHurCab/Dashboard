@@ -2,6 +2,7 @@ module.exports = {
   content: [
     './*.html',   
     './dashboard.css',
+    './dashboard.js',
   ],
   theme: {
     extend: {

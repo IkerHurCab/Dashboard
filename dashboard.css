@@ -2,3 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+    height: 100%;
+    margin: 0; 
+}
+
+#menu-options {
+    width: 250px;
+    overflow-y: auto;
+    flex: none;
+    height: 100%;
+    position: fixed;
+    top: 4rem; /* Adjusted to be slightly lower */
+}
+
+#menu-options::-webkit-scrollbar {
+    display: none;
+}
+
+#menu-options.collapsed {
+    animation: collapseSidebar 0.3s forwards;
+}
+
+#menu-options:not(.collapsed) {
+    animation: expandSidebar 0.3s forwards;
+}
+
+@keyframes collapseSidebar {
+    from {
+        width: 250px;
+    }
+
+    to {
+        width: 75px;
+    }
+}
+
+@keyframes expandSidebar {
+    from {
+        width: 75px;
+    }
+
+    to {
+        width: 250px;
+    }
+}
+
+.size-6 {
+    width: 24px;
+    height: 24px;
+}
+
+.size-8 {
+    width: 32px;
+    height: 32px;
+}
+
+#menu-options.collapsed .flex.justify-between span {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    #menu-options {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 40;
+    }
+
+    #menu-options:not(.collapsed) {
+        transform: translateX(0);
+    }
+
+    #menu-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 30;
+    }
+}
+
+.pixel-art {
+    image-rendering: pixelated;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+.flex-col.w-full {
+    margin-left: 13rem; /* Adjusted to be slightly to the right */
+}
