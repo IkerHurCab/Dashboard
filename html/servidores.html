@@ -435,195 +435,172 @@
             </header>
 
             <div class="p-4 h-full" id="content">
+
                 <h1 class="text-2xl font-bold">SERVIDORES</h1>
-                <table class="min-w-full text-left">
-                    <thead>
-                        <th class="border-b p-2">ID de servidor</th>
-                        <th class="border-b p-2">Nombre</th>
-                        <th class="border-b p-2">Estado</th>
-                        <th class="border-b p-2">Jugadores</th>
-                    </thead>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4">
+                    <div>
+                        <label for="serverId" class="block text-sm font-medium text-gray-700">ID de servidor</label>
+                        <input type="text" id="serverId"
+                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="serverName" class="block text-sm font-medium text-gray-700">Nombre</label>
+                        <input type="text" id="serverName"
+                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                    <div>
+                        <label for="serverStatus" class="block text-sm font-medium text-gray-700">Estado</label>
+                        <select id="serverStatus"
+                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <option value="">Todos</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                            <option value="Problemas de conexión">Problemas de conexión</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="serverPlayers" class="block text-sm font-medium text-gray-700">Jugadores</label>
+                        <input type="text" id="serverPlayers"
+                            class="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    </div>
+                </div>
 
-                    <tbody>
-                        <tr>
-                            <td class="border-b p-2">#08271</td>
-                            <td class="border-b p-2">Lobby 0</td>
-                            <td class="border-b p-2 text-green-500">Activo</td>
-                            <td class="border-b" p-2>124/200</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full text-left">
+                        <thead>
+                            <th class="border-b p-4">
+                                <div class="flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-6">
+                                        <path
+                                            d="M4.08 5.227A3 3 0 0 1 6.979 3H17.02a3 3 0 0 1 2.9 2.227l2.113 7.926A5.228 5.228 0 0 0 18.75 12H5.25a5.228 5.228 0 0 0-3.284 1.153L4.08 5.227Z" />
+                                        <path fill-rule="evenodd"
+                                            d="M5.25 13.5a3.75 3.75 0 1 0 0 7.5h13.5a3.75 3.75 0 1 0 0-7.5H5.25Zm10.5 4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm3.75-.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    ID de servidor
+                                </div>
+                            </th>
 
+
+                            <th class="border-b p-4">
+                                <div class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        fill="currentColor" class="size-6">
+                                        <path fill-rule="evenodd"
+                                            d="M9 2.25a.75.75 0 0 1 .75.75v1.506a49.384 49.384 0 0 1 5.343.371.75.75 0 1 1-.186 1.489c-.66-.083-1.323-.151-1.99-.206a18.67 18.67 0 0 1-2.97 6.323c.318.384.65.753 1 1.107a.75.75 0 0 1-1.07 1.052A18.902 18.902 0 0 1 9 13.687a18.823 18.823 0 0 1-5.656 4.482.75.75 0 0 1-.688-1.333 17.323 17.323 0 0 0 5.396-4.353A18.72 18.72 0 0 1 5.89 8.598a.75.75 0 0 1 1.388-.568A17.21 17.21 0 0 0 9 11.224a17.168 17.168 0 0 0 2.391-5.165 48.04 48.04 0 0 0-8.298.307.75.75 0 0 1-.186-1.489 49.159 49.159 0 0 1 5.343-.371V3A.75.75 0 0 1 9 2.25ZM15.75 9a.75.75 0 0 1 .68.433l5.25 11.25a.75.75 0 1 1-1.36.634l-1.198-2.567h-6.744l-1.198 2.567a.75.75 0 0 1-1.36-.634l5.25-11.25A.75.75 0 0 1 15.75 9Zm-2.672 8.25h5.344l-2.672-5.726-2.672 5.726Z"
+                                            clip-rule="evenodd" />
+                                    </svg>Nombre
+                                </div>
+                            </th>
+                            <th class="border-b p-4">
+                                <div class="flex gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        fill="currentColor" class="size-6">
+                                        <path
+                                            d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z" />
+                                    </svg>
+                                    Estado</div>
+                            </th>
+                            <th class="border-b p-4">
+                                <div class="flex gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                        class="size-6">
+                                        <path fill-rule="evenodd"
+                                            d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z"
+                                            clip-rule="evenodd" />
+                                        <path
+                                            d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z" />
+                                    </svg>
+                                    Jugadores
+                                </div>
+                            </th>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08271</td>
+                                <td class="border-b p-4 text-left">Lobby 0</td>
+                                <td class="border-b p-4 text-left text-green-500">Activo</td>
+                                <td class="border-b p-4 text-left">324/500</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08272</td>
+                                <td class="border-b p-4 text-left">Lobby 1</td>
+                                <td class="border-b p-4 text-left text-green-500">Activo</td>
+                                <td class="border-b p-4 text-left">299/500</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08273</td>
+                                <td class="border-b p-4 text-left">Partida 1</td>
+                                <td class="border-b p-4 text-left text-red-500">Inactivo</td>
+                                <td class="border-b p-4 text-left">0/200</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08274</td>
+                                <td class="border-b p-4 text-left">Partida 2</td>
+                                <td class="border-b p-4 text-left text-green-500">Activo</td>
+                                <td class="border-b p-4 text-left">180/200</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08275</td>
+                                <td class="border-b p-4 text-left">Partida 3</td>
+                                <td class="border-b p-4 text-left text-green-500">Activo</td>
+                                <td class="border-b p-4 text-left">190/200</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08276</td>
+                                <td class="border-b p-4 text-left">Partida 4</td>
+                                <td class="border-b p-4 text-left text-red-500">Inactivo</td>
+                                <td class="border-b p-4 text-left">0/200</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08277</td>
+                                <td class="border-b p-4 text-left">Partida 5</td>
+                                <td class="border-b p-4 text-left text-green-500">Activo</td>
+                                <td class="border-b p-4 text-left">170/200</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08278</td>
+                                <td class="border-b p-4 text-left">Partida 6</td>
+                                <td class="border-b p-4 text-left text-yellow-500">Problemas de conexión</td>
+                                <td class="border-b p-4 text-left">160/200</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08279</td>
+                                <td class="border-b p-4 text-left">Partida 7</td>
+                                <td class="border-b p-4 text-left text-red-500">Inactivo</td>
+                                <td class="border-b p-4 text-left">0/200</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08280</td>
+                                <td class="border-b p-4 text-left">Partida 8</td>
+                                <td class="border-b p-4 text-left text-green-500">Activo</td>
+                                <td class="border-b p-4 text-left">140/200</td>
+                            </tr>
+                            <tr>
+                                <td class="border-b p-4 text-left">#08281</td>
+                                <td class="border-b p-4 text-left">Partida 9</td>
+                                <td class="border-b p-4 text-left text-green-500">Activo</td>
+                                <td class="border-b p-4 text-left">130/200</td>
+                            </tr>
+                        </tbody>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 items-center">
+                    <p>Página 1
+                        <span class="mx-2">|</span>
+                        1-11 de 51 servidores
+                    </p>
+                    <div class="flex gap-4 justify-center md:justify-end"></div>
+                    <button class="bg-gray-200 text-black p-2 rounded hover:bg-gray-300">Anterior</button>
+                    <button class="bg-gray-200 text-black p-2 rounded hover:bg-gray-300">Siguiente</button>
+                </div>
             </div>
+
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const salesCtx = document.getElementById('salesChart').getContext('2d');
-        const usersCtx = document.getElementById('usersChart').getContext('2d');
-        const productsPieCtx = document.getElementById('productsPieChart').getContext('2d');
-        const performanceRadarCtx = document.getElementById('performanceRadarChart').getContext('2d');
-
-        const salesChart = new Chart(salesCtx, {
-            type: 'line',
-            data: {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-                datasets: [{
-                    label: 'Ventas',
-                    data: [120, 150, 180, 220, 260, 300],
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderWidth: 1,
-                    pointStyle: 'rectRot',
-                    pointRadius: 5,
-                    pointHoverRadius: 10
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    },
-                    x: {
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const usersChart = new Chart(usersCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-                datasets: [{
-                    label: 'Nuevos Usuarios',
-                    data: [30, 50, 70, 90, 110, 130],
-                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                    borderColor: 'rgba(153, 102, 255, 1)',
-                    borderWidth: 1,
-                    borderSkipped: false,
-                    barPercentage: 0.5,
-                    categoryPercentage: 0.5
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    },
-                    x: {
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const productsPieChart = new Chart(productsPieCtx, {
-            type: 'pie',
-            data: {
-                labels: ['Producto A', 'Producto B', 'Producto C', 'Producto D'],
-                datasets: [{
-                    label: 'Distribución de Productos',
-                    data: [300, 50, 100, 150],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const performanceRadarChart = new Chart(performanceRadarCtx, {
-            type: 'radar',
-            data: {
-                labels: ['Ventas', 'Usuarios', 'Productos', 'Categorías', 'Configuración'],
-                datasets: [{
-                    label: 'Rendimiento',
-                    data: [65, 59, 90, 81, 56],
-                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                    borderColor: 'rgba(255, 159, 64, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    r: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
+    </div>
 </body>
 
 </html>

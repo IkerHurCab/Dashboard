@@ -435,178 +435,134 @@
             </header>
 
             <div class="p-4" id="content">
-                <h1 class="text-2xl font-bold">PRODUCTOS</h1>
+                <h1 class="text-2xl font-bold">CATEGORÍAS</h1>
+
+                <h2 class="text-xl mt-4">JUEGOS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <h2 class="text-lg font-bold mb-2">Categoría 1</h2>
+                        <p class="text-sm text-gray-600">Descripción de la categoría 1</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h2 class="text-lg font-bold mb-2">Categoría 2</h2>
+                        <p class="text-sm text-gray-600">Descripción de la categoría 2</p>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <h2 class="text-lg font-bold mb-2">Categoría 3</h2>
+                        <p class="text-sm text-gray-600">Descripción de la categoría 3</p>
+                    </div>
+                </div>
+
+                <h2 class="text-xl mt-4">Juegos Más Jugados</h2>
+                <canvas id="mostPlayedGamesChart" class="mt-4"></canvas>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                <script>
+                    const ctx = document.getElementById('mostPlayedGamesChart').getContext('2d');
+                    const mostPlayedGamesChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Juego 1', 'Juego 2', 'Juego 3', 'Juego 4', 'Juego 5'],
+                            datasets: [{
+                                label: 'Horas Jugadas',
+                                data: [120, 150, 180, 90, 200],
+                                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                                borderColor: 'rgba(54, 162, 235, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
+
+                <h2 class="text-xl mt-4">COMPRAS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h2 class="text-lg font-bold mb-2">Subcategoría 1</h2>
+                                <p class="text-sm text-gray-600">Descripción de la subcategoría 1</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-12 text-yellow-500">
+                                <path
+                                    d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                                <path fill-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h2 class="text-lg font-bold mb-2">Subcategoría 2</h2>
+                                <p class="text-sm text-gray-600">Descripción de la subcategoría 2</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-12 text-yellow-500">
+                                <path
+                                    d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                                <path fill-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h2 class="text-lg font-bold mb-2">Subcategoría 3</h2>
+                                <p class="text-sm text-gray-600">Descripción de la subcategoría 3</p>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-12 text-yellow-500">
+                                <path
+                                    d="M10.464 8.746c.227-.18.497-.311.786-.394v2.795a2.252 2.252 0 0 1-.786-.393c-.394-.313-.546-.681-.546-1.004 0-.323.152-.691.546-1.004ZM12.75 15.662v-2.824c.347.085.664.228.921.421.427.32.579.686.579.991 0 .305-.152.671-.579.991a2.534 2.534 0 0 1-.921.42Z" />
+                                <path fill-rule="evenodd"
+                                    d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v.816a3.836 3.836 0 0 0-1.72.756c-.712.566-1.112 1.35-1.112 2.178 0 .829.4 1.612 1.113 2.178.502.4 1.102.647 1.719.756v2.978a2.536 2.536 0 0 1-.921-.421l-.879-.66a.75.75 0 0 0-.9 1.2l.879.66c.533.4 1.169.645 1.821.75V18a.75.75 0 0 0 1.5 0v-.81a4.124 4.124 0 0 0 1.821-.749c.745-.559 1.179-1.344 1.179-2.191 0-.847-.434-1.632-1.179-2.191a4.122 4.122 0 0 0-1.821-.75V8.354c.29.082.559.213.786.393l.415.33a.75.75 0 0 0 .933-1.175l-.415-.33a3.836 3.836 0 0 0-1.719-.755V6Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-xl mt-4">Productos Más Comprados</h2>
+                <canvas id="mostPurchasedProductsChart" class="mt-4"></canvas>
+
+                <script>
+                    const ctxPurchased = document.getElementById('mostPurchasedProductsChart').getContext('2d');
+                    const mostPurchasedProductsChart = new Chart(ctxPurchased, {
+                        type: 'bar',
+                        data: {
+                            labels: ['Producto 1', 'Producto 2', 'Producto 3', 'Producto 4', 'Producto 5'],
+                            datasets: [{
+                                label: 'Cantidad Comprada',
+                                data: [50, 75, 100, 60, 90],
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                borderColor: 'rgba(255, 99, 132, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                </script>
  
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const salesCtx = document.getElementById('salesChart').getContext('2d');
-        const usersCtx = document.getElementById('usersChart').getContext('2d');
-        const productsPieCtx = document.getElementById('productsPieChart').getContext('2d');
-        const performanceRadarCtx = document.getElementById('performanceRadarChart').getContext('2d');
-
-        const salesChart = new Chart(salesCtx, {
-            type: 'line',
-            data: {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-                datasets: [{
-                    label: 'Ventas',
-                    data: [120, 150, 180, 220, 260, 300],
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderWidth: 1,
-                    pointStyle: 'rectRot',
-                    pointRadius: 5,
-                    pointHoverRadius: 10
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    },
-                    x: {
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const usersChart = new Chart(usersCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-                datasets: [{
-                    label: 'Nuevos Usuarios',
-                    data: [30, 50, 70, 90, 110, 130],
-                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                    borderColor: 'rgba(153, 102, 255, 1)',
-                    borderWidth: 1,
-                    borderSkipped: false,
-                    barPercentage: 0.5,
-                    categoryPercentage: 0.5
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    },
-                    x: {
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const productsPieChart = new Chart(productsPieCtx, {
-            type: 'pie',
-            data: {
-                labels: ['Producto A', 'Producto B', 'Producto C', 'Producto D'],
-                datasets: [{
-                    label: 'Distribución de Productos',
-                    data: [300, 50, 100, 150],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const performanceRadarChart = new Chart(performanceRadarCtx, {
-            type: 'radar',
-            data: {
-                labels: ['Ventas', 'Usuarios', 'Productos', 'Categorías', 'Configuración'],
-                datasets: [{
-                    label: 'Rendimiento',
-                    data: [65, 59, 90, 81, 56],
-                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                    borderColor: 'rgba(255, 159, 64, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    r: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>

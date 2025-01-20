@@ -436,177 +436,97 @@
 
             <div class="p-4" id="content">
                 <h1 class="text-2xl font-bold">MENSAJES</h1>
- 
+                <div class="mt-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold">Bandeja de Entrada</h2>
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Nuevo
+                            Mensaje</button>
+                    </div>
+                    <div class="bg-white shadow rounded-lg overflow-hidden">
+                        <table class="min-w-full bg-white">
+                            <thead class="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
+                                <tr>
+                                    <th class="py-3 px-6 text-left">Remitente</th>
+                                    <th class="py-3 px-6 text-left">Asunto</th>
+                                    <th class="py-3 px-6 text-center">Fecha</th>
+                                    <th class="py-3 px-6 text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-gray-600 text-sm font-light">
+                                <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <span class="font-medium">Juan Pérez</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-6 text-left">
+                                        <div class="flex items-center">
+                                            <span>Consulta sobre producto</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-6 text-center">
+                                        <span>01/10/2023</span>
+                                    </td>
+                                    <td class="py-3 px-6 text-center">
+                                        <div class="flex item-center justify-center">
+                                            <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M15 12H9m4 8H9m4-16H9m4 8H9m4 8H9m4-16H9" />
+                                                </svg>
+                                            </div>
+                                            <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-gray-200 hover:bg-gray-100">
+                                    <td class="py-3 px-6 text-left whitespace-nowrap">
+                                        <div class="flex items-center">
+                                            <span class="font-medium">María López</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-6 text-left">
+                                        <div class="flex items-center">
+                                            <span>Servidor caído</span>
+                                        </div>
+                                    </td>
+                                    <td class="py-3 px-6 text-center">
+                                        <span>30/09/2023</span>
+                                    </td>
+                                    <td class="py-3 px-6 text-center">
+                                        <div class="flex item-center justify-center">
+                                            <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M15 12H9m4 8H9m4-16H9m4 8H9m4 8H9m4-16H9" />
+                                                </svg>
+                                            </div>
+                                            <div class="w-4 mr-2 transform hover:text-purple-500 hover:scale-110">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        const salesCtx = document.getElementById('salesChart').getContext('2d');
-        const usersCtx = document.getElementById('usersChart').getContext('2d');
-        const productsPieCtx = document.getElementById('productsPieChart').getContext('2d');
-        const performanceRadarCtx = document.getElementById('performanceRadarChart').getContext('2d');
-
-        const salesChart = new Chart(salesCtx, {
-            type: 'line',
-            data: {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-                datasets: [{
-                    label: 'Ventas',
-                    data: [120, 150, 180, 220, 260, 300],
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderWidth: 1,
-                    pointStyle: 'rectRot',
-                    pointRadius: 5,
-                    pointHoverRadius: 10
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    },
-                    x: {
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const usersChart = new Chart(usersCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-                datasets: [{
-                    label: 'Nuevos Usuarios',
-                    data: [30, 50, 70, 90, 110, 130],
-                    backgroundColor: 'rgba(153, 102, 255, 0.2)',
-                    borderColor: 'rgba(153, 102, 255, 1)',
-                    borderWidth: 1,
-                    borderSkipped: false,
-                    barPercentage: 0.5,
-                    categoryPercentage: 0.5
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    },
-                    x: {
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const productsPieChart = new Chart(productsPieCtx, {
-            type: 'pie',
-            data: {
-                labels: ['Producto A', 'Producto B', 'Producto C', 'Producto D'],
-                datasets: [{
-                    label: 'Distribución de Productos',
-                    data: [300, 50, 100, 150],
-                    backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)'
-                    ],
-                    borderColor: [
-                        'rgba(255, 99, 132, 1)',
-                        'rgba(54, 162, 235, 1)',
-                        'rgba(255, 206, 86, 1)',
-                        'rgba(75, 192, 192, 1)'
-                    ],
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-
-        const performanceRadarChart = new Chart(performanceRadarCtx, {
-            type: 'radar',
-            data: {
-                labels: ['Ventas', 'Usuarios', 'Productos', 'Categorías', 'Configuración'],
-                datasets: [{
-                    label: 'Rendimiento',
-                    data: [65, 59, 90, 81, 56],
-                    backgroundColor: 'rgba(255, 159, 64, 0.2)',
-                    borderColor: 'rgba(255, 159, 64, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    r: {
-                        beginAtZero: true,
-                        grid: {
-                            color: 'rgba(0, 0, 0, 0.1)',
-                            borderDash: [2, 2]
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        labels: {
-                            font: {
-                                family: "'Press Start 2P', cursive"
-                            }
-                        }
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>
