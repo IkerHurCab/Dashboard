@@ -1,18 +1,18 @@
 module.exports = {
   content: [
-    './*.html',   
-    './dashboard.css',
-    './dashboard.js',
+    './html/**/*.html', 
+    './**/*.css',             
+    './**/*.js',             
   ],
   theme: {
     extend: {
       backgroundColor: {
-        'native': '#050929',
+        'native': '#050929', 
       },
       fontFamily: {
-        "pixel": ["'Press Start 2P'", "cursive"],
+        'pixel': ["'Press Start 2P'", "cursive"], 
       },
     },
   },
   plugins: [],
-}
+};
